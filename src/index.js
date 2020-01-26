@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
 
  function handleFilter(inputString){
    const breeds = document.querySelectorAll('ul#dog-breeds li');
-  console.log(find(breeds , li =>li.textContent.charAt(0) == inputString ));
+  // console.log(find(breeds , li => li.textContent.charAt(0) == inputString ));
    for(const li of breeds){
      if(li.textContent.charAt(0) == inputString){
        li.style.display = "list-item";
