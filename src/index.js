@@ -13,8 +13,8 @@ window.addEventListener("load", () => {
    images.forEach(img => {
      const imgTag = document.createElement("img");
      imgTag.src = img;
-     imgTag.width = 50;
-     imgTag.height = 50;
+     imgTag.width = 200;
+     imgTag.height = 200;
      imgdiv.appendChild(imgTag);
    });
  }
@@ -42,6 +42,7 @@ window.addEventListener("load", () => {
 
  function handleFilter(inputString){
    const breeds = document.querySelectorAll('ul#dog-breeds li');
+  console.log(find(breeds , li =>li.textContent.charAt(0) == inputString ));
    for(const li of breeds){
      if(li.textContent.charAt(0) == inputString){
        li.style.display = "list-item";
